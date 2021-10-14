@@ -513,10 +513,13 @@
 
 		if(name == "" || email == "" || number == "" || userpassr == "" ||userpass2 == "")
 			error = "Заполните все поля!";
+		
+		else if(userpassr.length < 6)
+			error += "Слишком короткий пароль!";
 
 		else if(userpassr != userpass2)
 			error += "Пароли должны совпадать!";
-
+		
 		else if( isNaN(number) )
 			error += "Номер телефона должен содержать цифры!";
 
