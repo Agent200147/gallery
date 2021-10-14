@@ -9,13 +9,406 @@ body{
     font-size: 24px;
     background: black; 
     background-image: url(wb.jpg); 
+/*    filter: blur(7px);*/
+/*    backdrop-filter: blur(10px);*/
 
     background-position: center 0; 
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
+    -webkit-transition: all 1s ease 0s;
+    -moz-transition: all 1s ease 0s;
+    -o-transition: all 1s ease 0s;
+    transition: all 1s ease 0s;
 }
 
 
+.navham{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-left: -157px;
+    margin-bottom: -160px;
+    background: #07C3B8;
+    height: 110px;
+    justify-content: space-between;
+    z-index: -2000;
 
+    display: none;
+    
+    -webkit-transition: all 0.5s ease;;
+    -moz-transition: all 0.5s ease;;
+    -o-transition: all 0.5s ease;;
+    transition: all 0.5s ease;
+}
+
+.shapka .active {
+        border-radius: 10px;
+    margin-left: 0px;
+    -webkit-transition: all 0.5s ease;;
+    -moz-transition: all 0.5s ease;;
+    -o-transition: all 0.5s ease;;
+    transition: all 0.5s ease;
+}
+.navham li a{
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+    letter-spacing: 0.08em;
+    list-style-type: none;
+
+}
+.navham li{
+    list-style-type: none;
+    border: 2px solid black;
+}
+
+.ham{
+    display: none;
+}
+
+/*-----СТИЛИ РЕГИСТРАЦИИ-----
+-----СТИЛИ РЕГИСТРАЦИИ-----
+-----СТИЛИ РЕГИСТРАЦИИ-----*/
+
+#error{
+    font-size: 20px;
+    text-align: center;
+    color: red;
+/*    font-family: inherit; */
+    margin-top: 20px;
+    letter-spacing: 0.08em;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.regf{
+    position: fixed;
+    top: 48.5%;
+    left: 50%;
+    margin-top: -300px;
+    margin-left: -295px;
+    width: 590px;
+    height: 600px;
+    background: #07C3B8;
+    border-radius: 11px;
+    z-index: 1;
+    display: none;
+
+    -webkit-transition: all 2s ease 0s;
+    -moz-transition: all 2s ease 0s;
+    -o-transition: all 2s ease 0s;
+    transition: all 2s ease 0s;
+}
+
+   .regf:target {
+      opacity: 1;
+      pointer-events: auto;
+      overflow-y: auto;
+    }
+form .reg img{
+    border-radius: 11px;
+}
+
+form .reg p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    position: absolute;
+    color: white;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: 0.08em;
+    left: 159px;
+    top: 63px;
+}
+
+.close{
+    cursor: pointer;
+}
+
+.close img{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    position: absolute;
+    left: 561px;
+    top: 11px;
+}
+
+
+form > div{
+text-align: center;
+}
+
+.regf input{
+    width: 373px;
+    height: 35px;
+    border-radius: 11px;
+    border: 0px solid #bdbdbd;
+    font-family: inherit;
+    font-size: 22px;
+    line-height: 24px;
+    padding-left: 17px;
+    margin-bottom: 9px;
+}
+
+.log{
+    margin-top: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.log input, .email input, .tel input, .pass input, .pass1 input{  
+    background-repeat: no-repeat; 
+    background-position: 97%; 
+    padding-right: 40px;
+    transition: border-color 0.17s ease-in-out, box-shadow 0.17s ease-in-out;
+
+}
+
+.log input:focus, .email input:focus, .tel input:focus, .pass input:focus, .pass1 input:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #bdbdbd;
+    outline: 0;
+    box-shadow: 0 0 0 0.22rem rgba(138, 138, 138, 0.6);
+}
+
+.log input{background-image: url(../img/reg/user.svg);} 
+.email input{background-image: url(../img/reg/mail.svg);}
+.tel input{background-image: url(../img/reg/phone.svg);}
+.pass input{background-image: url(../img/reg/parol.svg);}
+.pass1 input{background-image: url(../img/reg/parol.svg);}
+
+.ch{
+    margin-top: 15px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    margin-left: 82px;
+    width: 67%;
+    cursor: pointer;
+}
+
+.ch input{
+    display: none;
+}
+
+.ch p{
+    margin-left: 4px;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    margin-bottom: auto;
+    margin-top: auto;
+    color: black;
+}
+
+.ch img:nth-child(1){
+    margin-right: -17px;
+    opacity: 0;
+
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+.active img:nth-child(1) {
+    opacity: 1;
+
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.knopkareg{
+    margin-top: 16px;
+        -webkit-transition: all 3s ease 0s;
+    -moz-transition: all 3s ease 0s;
+    -o-transition: all 3s ease 0s;
+    transition: all 3s ease 0s;
+}
+
+.regf .knop{
+    width: 430px;
+    height: 50px;
+    background: #8DA399;
+    color: white;
+    font-size: 24px;
+    line-height: 27px;
+    letter-spacing: 0.08em;
+    font-family: inherit;
+    margin-top: 6px;
+    text-align: center;
+    padding-left: 0px;
+
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
+}
+
+.knopkareg .active{
+    cursor: pointer;
+    width: 430px;
+    height: 50px;
+    background: black;
+    color: white;
+    font-size: 24px;
+    line-height: 27px;
+    letter-spacing: 0.08em;
+    font-family: inherit;
+    margin-top: 6px;
+    text-align: center;
+    padding-left: 0px;
+
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
+}
+.knopkareg .active:hover{
+    background: white;
+    color: black;
+}
+
+/*-----СТИЛИ РЕГИСТРАЦИИ-----
+-----СТИЛИ РЕГИСТРАЦИИ-----
+-----СТИЛИ РЕГИСТРАЦИИ-----*/
+
+
+
+
+
+
+
+
+
+/*-----СТИЛИ ВХОДА-----
+-----СТИЛИ ВХОДА-----
+-----СТИЛИ ВХОДА-----*/
+
+.vhodf{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -224px;
+    margin-left: -295px;
+    width: 590px;
+    height: 438px;
+    background: #07C3B8;
+    border-radius: 11px;
+
+    z-index: 1;
+    display: none;
+}
+
+.vhod img{
+    border-radius: 11px;
+}
+
+.vhod p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    color: white;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: 0.08em;
+
+    position: absolute;
+    left: 245px;
+    top: 63px;
+}
+
+form > div{
+text-align: center;
+}
+
+.vhodf input{
+    width: 373px;
+    height: 35px;
+    border-radius: 11px;
+    border: 0px solid #bdbdbd;
+    font-family: inherit;
+    font-size: 22px;
+    line-height: 24px;
+    padding-left: 17px;
+    margin-bottom: 22px;
+}
+
+.log{
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.log input, .pass input{  
+    background-repeat: no-repeat; 
+    background-position: 97%; 
+    padding-right: 40px;
+    transition: border-color 0.17s ease-in-out, box-shadow 0.17s ease-in-out;
+
+}
+
+.log input:focus, .email input:focus, .tel input:focus, .pass input:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #bdbdbd;
+    outline: 0;
+    box-shadow: 0 0 0 0.22rem rgba(138, 138, 138, 0.6);
+}
+
+.log input{background-image: url(../img/reg/user.svg);} 
+
+.pass input{background-image: url(../img/reg/parol.svg);}
+
+
+.vhodf .knopv{
+    cursor: pointer;
+    width: 430px;
+    height: 50px;
+    background: black;
+    color: white;
+    font-size: 24px;
+    line-height: 27px;
+    letter-spacing: 0.08em;
+    font-family: inherit;
+    margin-top: 19px;
+    text-align: center;
+    padding-left: 0px;
+
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
+}
+
+.knopv:hover{
+    background: white;
+    color: black;
+}
+
+/*-----СТИЛИ ВХОДА-----
+-----СТИЛИ ВХОДА-----
+-----СТИЛИ ВХОДА-----*/
+
+
+
+
+
+
+
+
+
+
+/*-----ПРЕЛОАДЕР-----
+-----ПРЕЛОАДЕР-----
+-----ПРЕЛОАДЕР-----*/
 
 .animate__animated.animate__fadeInLeft{
     animation-duration: 2s;
@@ -26,16 +419,12 @@ body{
 }
 
 .preloader {
-  /*фиксированное позиционирование*/
   position: fixed;
-  /* координаты положения */
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
-  /* фоновый цвет элемента */
   background: black;
-  /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
   z-index: 1001;
 }
 
@@ -92,19 +481,15 @@ body{
 }
 
 .loadeds .preloader {
-/*  animation: dis 5s ease-in;*/
  display: none;
 }
 
+/*-----ПРЕЛОАДЕР-----
+-----ПРЕЛОАДЕР-----
+-----ПРЕЛОАДЕР-----*/
 
-/*@keyframes dis {
-0%{
 
-}
-100%{
-    display: none;
-}
-}*/
+
 
 
 
@@ -112,10 +497,10 @@ body{
     width: 1170px;
     margin: 0 auto;
 
-    -webkit-transition: all 0.5s ease;;
-    -moz-transition: all 0.5s ease;;
-    -o-transition: all 0.5s ease;;
-    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.2s ease;
 }
 .container1{
     width: 1370px;
@@ -124,7 +509,7 @@ body{
     -webkit-transition: all 0.5s ease;;
     -moz-transition: all 0.5s ease;;
     -o-transition: all 0.5s ease;;
-    transition: all 0.5s ease;
+    transition: all 0.2s ease;
 }
 
 
@@ -137,7 +522,7 @@ body{
 header{
 
 }
-.shapka img:first-child{
+.ham{
 display: none;
 }
 .container{
@@ -191,11 +576,15 @@ li{
     color: black;
 }
 
-.reg, .vhod{
+.regb, .vhodb{
+    font-size: 25px;
+    font-family: inherit;
+    border: 0px solid #bdbdbd;
     letter-spacing: 0.08em;
     text-align: center;
     display: flex;
     align-items: center;
+    justify-content: center;
     background: rgba(7, 195, 184, 0.8);
     cursor: pointer;
 
@@ -204,20 +593,20 @@ li{
     -o-transition: all 0.5s ease;;
     transition: all 0.5s ease;
 }
-.reg{
+.regb{
     width: 200px;
     height: 41px;
     border-radius: 27px;
     margin-right: 12px;
 }
 
-.vhod{
+.vhodb{
     width: 88px;
     height: 41px;
     border-radius: 27px;
 }
 
-.reg:hover, .vhod:hover{
+.regb:hover, .vhodb:hover{
     background: white;
 }
 /*-----ШАПКА-----
@@ -240,18 +629,17 @@ li{
 .slider{
     width: 1400px;
     margin: 0 auto;
+    z-index: 3;
 }
 .line1{
     margin: 0 auto;
     margin-top: 51px;
-/*    width: 1400px;*/
     height: 12px;
     background: rgba(7, 195, 184, 0.8);
 }
 
 .line2{
     margin: 0 auto;
-/*    width: 1400px;*/
     height: 12px;
     background: rgba(7, 195, 184, 0.8);
 }
@@ -261,7 +649,6 @@ li{
     margin-bottom: 3px;
     display: flex;
     overflow: hidden;
-/*    animation: slide2 40s infinite;*/
 }
 
 .half1, .half2{
@@ -270,6 +657,32 @@ li{
 .sliderimg .half1 img:first-child{
     animation: slide 60s infinite;
     animation-delay: 6.5s;
+}
+
+@keyframes slide {
+  0% {margin-left: 0px;}
+  4.54% {margin-left: -200px;}
+  9.08% {margin-left: -400px;}
+  13.62% {margin-left: -600px;}
+  18.16% {margin-left: -800px;}
+  22.7% {margin-left: -1000px;}
+  27.24% {margin-left: -1200px;}
+  31.78% {margin-left: -1400px;}
+  36.32%{margin-left: -1600px;}
+  40.86%{margin-left: -1800px;}
+  45.4%{margin-left: -2000px;}
+  49.94%{margin-left: -2200px;}
+  54.48%{margin-left: -2400px;}
+  59.02%{margin-left: -2600px;}
+  63.56%{margin-left: -2800px;}
+  68.1%{margin-left: -3000px;}
+  72.64%{margin-left: -3200px;}
+  77.18%{margin-left: -3400px;}
+  81.72%{margin-left: -3600px;}
+  86.26%{margin-left: -3800px;}
+  90.8%{margin-left: -4000px;}
+  95.34%{margin-left: -4300px;}
+  100%{margin-left: 0px;}
 }
 /*-----СЛАЙДЕР-----
 -----СЛАЙДЕР-----
@@ -291,6 +704,7 @@ li{
 .one{
     margin-top: 105px;
     display: flex;
+
 }
 
 .one .container{
@@ -353,7 +767,6 @@ h1{
     height: 600px;
     display: flex;
     background: rgba(7, 195, 184, 0.8);
-/*    background: #FF9955;*/
     border-radius: 30px;
 }
 
@@ -384,6 +797,7 @@ h1{
     border: 7px solid #000000;
 }
 */
+
 .firstrow, .secondrow, .thirdrow{
     display: flex;
     justify-content: space-between;
@@ -420,10 +834,8 @@ h1{
 
 
 
-/*.wow {
-   visibility: hidden;
-}
-*/
+
+
 
 
 
@@ -489,132 +901,9 @@ footer{
 .prav h1{
     font-size: 24px;
 }
-@keyframes slide {
-  0% {
-    margin-left: 0px;
-  }
-  4.54% {
-    margin-left: -200px;
-  }
-  9.08% {
-    margin-left: -400px;
-  }
-  13.62% {
-    margin-left: -600px;
-  }
-  18.16% {
-    margin-left: -800px;
-  }
-  22.7% {
-    margin-left: -1000px;
-  }
-  27.24% {
-    margin-left: -1200px;
-  }
-  31.78% {
-    margin-left: -1400px;
-  }
-  36.32%{
-    margin-left: -1600px;
-  }
-  40.86%{
-    margin-left: -1800px;
-  }
-  45.4%{
-    margin-left: -2000px;
-  }
-  49.94%{
-    margin-left: -2200px;
-  }
-  54.48%{
-    margin-left: -2400px;
-  }
-  59.02%{
-    margin-left: -2600px;
-  }
-  63.56%{
-    margin-left: -2800px;
-  }
-  68.1%{
-    margin-left: -3000px;
-  }
-  72.64%{
-    margin-left: -3200px;
-  }
-  77.18%{
-    margin-left: -3400px;
-  }
-  81.72%{
-    margin-left: -3600px;
-  }
-  86.26%{
-    margin-left: -3800px;
-  }
-  90.8%{
-    margin-left: -4000px;
-  }
-  95.34%{
-    margin-left: -4300px;
-  }
-  100%{
-    margin-left: 0px;
-  }
-}
-
-@keyframes slide2 {
-    0%{
-
-    }
-    14% {
-
-  }
-  28% {
-
-  }
-  42% {
-
-  }
-  56% {
-
-  }
-  71% {
-
-  }
-  85% {
-
-}
-    100% {
-    flex-direction: row-reverse;
-
-  }
-}
-
-/*body {
-    -webkit-transform: translateZ(999px) scale(.7);
-    transform: translateZ(999px) scale(.7);
-    -ms-transform: translateZ(999px) scale(.7);
-    z-index: 1;
-  }*/
-/*html {
-    perspective: 1px;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
-
-body {
-   transform: translateZ(0);
-   -webkit-transform: translateZ(0);
-}
-.two .container{
-    transform: translateZ(-1px) scale(2);
-    -webkit-transform: translateZ(-1000px) scale(2);
-    -ms-transform: translateZ(-1000px) scale(2);
-}*/
-
-
-/*.one{
-    margin-top: 2000px;
-}*/
+/*-----КОНТАКТЫ-----
+-----КОНТАКТЫ-----
+-----КОНТАКТЫ-----*/
 
 
 
@@ -631,6 +920,10 @@ body {
 
 
 
+
+/*-----АДАПТАЦИЯ-----
+-----АДАПТАЦИЯ-----
+-----АДАПТАЦИЯ-----*/
 @media screen and (max-width: 1400px) { 
     .container { width: 1170px;}
     .container1 { width: 1200px;}
@@ -663,9 +956,9 @@ body {
     .container1 { width: 100%;}
     .shapka img{ width: 190px; }
     .nav li a{font-size: 20px;}
-    .buttons p{font-size: 20px;}
-    .reg{width: 160px; margin-right: 5px;}
-    .vhod{width: 65px;}
+    .regb, .vhodb {font-size: 20px;}
+    .regb{width: 160px; margin-right: 5px;}
+    .vhodb{width: 65px;}
     .one{margin-top: 60px;}
     h1{font-size: 50px;}
     .content{width: 450px; font-size: 22px;}
@@ -695,9 +988,12 @@ body {
 @media screen and (max-width: 767px) { 
     .container { width: 540px;}
     .container1 { width: 100%;}
+    .line1{margin-top: 100px;}
     .nav{display: none;}
-    .shapka img:first-child{display: block; width: 40px; margin-right: 20px; padding-left: 20px; cursor: pointer;}
-    .shapka img:nth-child(2){width: 170px}
+    .navham{ display: block }
+    .ham {display: block; width: 40px; margin-right: 20px; padding-left: 20px; cursor: pointer;}
+    .ham img{width: 40px;}
+    .shapka img:nth-child(2){display: none;}
 
 
     .one{margin-top:;}
@@ -730,6 +1026,55 @@ body {
 }
 
 
+
+
+
+
+
+
+
+/*@media screen and (max-width: 630px) { 
+    .regf{margin-top: -400px; 
+        margin-left: auto; 
+        margin-right: auto; 
+        left: 0;
+        width: 100vw;}
+    .regf input{
+    width: 80vw;
+    height: 35px;
+    border-radius: 11px;
+    border: 0px solid #bdbdbd;
+    font-family: inherit;
+    font-size: 22px;
+    line-height: 24px;
+    padding-left: 17px;
+    margin-bottom: 9px;
+    margin-left: auto;
+    margin-right: auto;
+}
+    .reg img{
+        width: 100vw;
+    }
+
+    form .reg p{
+        left: 21vw;
+        top: 1em;
+    }
+
+    .knopkareg{
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+}
+*/
+
+
+
+
+
+
+
 @media screen and (max-width: 565px) { 
     .container { width: 100%; flex-direction: column-reverse;}
     .container1 { width: 100%;}
@@ -737,16 +1082,17 @@ body {
     border: 4px solid #000000;
 }*/
 
-    .line1{margin-top: 40px;}
+/*    .line1{margin-top: 40px;}*/
 
     .one{margin-top: 40px;}
     .desc{width: 100%; text-align: center;}
     h1{font-size: 40px; width: 90%; margin-left:auto; margin-right: auto; margin-top: 40px;}
     .content{width: 90%; font-size: 18px; margin-left: auto; margin-right: auto;}
     .cam{ margin-top: 0px; margin-left: auto; margin-right: auto; width: 100%; text-align: center;}
-    .cam img{width: 60%; }
+    .cam img{width: 50%; }
 
 
+    .two {margin-top: 190px;}
     .two h1{font-size: 24px;}
     .left{margin-left: 5px;}
     .left img{width: 25px;}
@@ -779,10 +1125,10 @@ body {
 
 
     .conhed{width: 60%; height: auto; border-radius: 42px;}
-    .conhed h1{font-size: 34px; margin-top: auto;}
-    
+    .conhed h1{font-size: 34px; margin-top: auto; height: auto;}
+    .icons{margin-top: 130px;}
 
-    .prav{margin-top: 180px; width: 55%; display: flex; text-align: center;}
+    .prav{margin-top: 140px; width: 55%; display: flex; text-align: center;}
     .prav h1{margin-top: 0px; font-size: 18px;}
 }
 
@@ -790,3 +1136,11 @@ body {
 @media screen and (max-width: 480px){
     .shapka img:nth-child(2){display: none;}
 }
+
+@media screen and (max-width: 380px){
+    .ham{ margin-left: 0px; padding-left: 0px; padding-right: 0px; width: 20px;}
+    .regb{margin-right: 3px;}
+}
+/*-----АДАПТАЦИЯ-----
+-----АДАПТАЦИЯ-----
+-----АДАПТАЦИЯ-----*/
