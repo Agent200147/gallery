@@ -564,6 +564,9 @@
 
 // 		else if(userpassr != userpass2)
 // 			error += "Пароли должны совпадать!";
+	
+		else if(email.split("@").length <= 1)
+			error += "Неверно указан email";
 
 // 		else if( isNaN(number) )
 // 			error += "Номер телефона должен содержать цифры!";
