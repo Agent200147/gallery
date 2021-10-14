@@ -8,32 +8,144 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Podkova&family=Poiret+One&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/animate.css">
 <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-<!--     <script src="wow.min.js"></script>
-    <script>
-    	new WOW().init();
-    </script> -->
+<script src="js/main.js"></script>
 </head>
 
 <body>
 
-	<div class="preloader">
+<!-- 	<div class="preloader">
   		<div class="preloader__row">
     		<div class="preloader__item"></div>
     		<div class="preloader__item"></div>
   		</div>
 	</div>
+ -->
+
+
+
+
+<!-- -----РЕГИСТРАЦИЯ----
+-----РЕГИСТРАЦИЯ----
+-----РЕГИСТРАЦИЯ---- -->
+
+<form action="#" method="post" class="regf">
+<!-- 	onsubmit="return checkform(this)" -->
+
+			<div class="reg" id="regg">
+				<p>Регистрация</p>
+				<img src="img/reg.png" alt="">
+				<div class="close close_r"><img src="img/close.png" alt=""></div>
+			</div>
+
+			<div class="log">
+				<input type="text" name="usernamer" placeholder="Логин" class="login">
+			</div>
+
+			<div class="email">
+				<input type="text" name="email" placeholder="E-mail">
+			</div>
+
+			<div class="tel">
+				<input type="tel" name="number" placeholder="Телефон">
+			</div>
+
+			<div class="pass">
+				<input type="password" name="userpassr" placeholder="Пароль">
+			</div>
+
+			<div class="pass1">
+				<input type="password" name="userpass2" placeholder="Повторите пароль">
+			</div>
+
+			<div class="ch">
+				<img src="img/vector1.svg" alt="">
+				<img src="img/vector.svg" alt="">
+				<p><input type="checkbox" name="sec"> Согласен на обработку персональных данных</p>
+			</div>
+
+			<div id="error"></div>
+
+			<div class="knopkareg">
+				<input type="button" disabled="" name="zareg" class="knop" value="Зарегистрироваться">
+			</div>
+		</form>
+
+<!-- -----РЕГИСТРАЦИЯ-----
+-----РЕГИСТРАЦИЯ-----
+-----РЕГИСТРАЦИЯ----- -->
+
+
+
+
+
+
+
+<!-- -----ВХОД------
+-----ВХОД-----
+-----ВХОД----- -->
+
+	<form action="#" method="post" class="vhodf">
+
+		<div class="vhod">
+			<p>Вход</p>
+			<img src="img/vhod.png" alt="">
+			<div class="close close_v"><img src="img/close.png" alt=""></div>
+		</div>
+
+		<div class="log">
+			<input type="text" name="usernamev" placeholder="Логин" class="login">
+		</div>
+
+		<div class="pass">
+			<input type="password" name="userpassv" placeholder="Пароль">
+		</div>
+
+
+		<div class="knopkavhod">
+			<input type="submit" name="zareg" class="knopv" value="Войти">
+		</div>
+	</form>
+
+<!-- -----ВХОД------
+-----ВХОД-----
+-----ВХОД----- -->
+
+
+
+
 
 	<header id="header"class="header">
 		<div class="container1">
 
 
-			<div class="shapka animate__animated animate__fadeIn animate__delay-4s">
-				<img src="img/menu.svg" alt="">
+			<div class="shapka animate__animated animate__fadeIn animate__delay-0s">
+				<div class="ham"><img src="img/menu.svg" alt=""></div>
+				
 				<img src="img/logo1.png" alt="">
+
+				<div class="navham">
+							
+						<li>
+							<a href="#header">
+								Главная
+							</a>
+						</li>
+						<li>
+							<a href="#two1">
+								Фото
+							</a>
+						</li>
+						<li>
+							<a href="#contact">
+								Контакты
+							</a>
+						</li>
+
+					</div>
+
 				<ul class="menu">
 					<div class="nav">
 							
@@ -56,12 +168,15 @@
 					</div>
 					
 						<div class="buttons">
-							<li class="reg">
+							<!-- <li class="reg">
 								<p>Регистрация</p>
 							</li>
 							<li class="vhod">
 								<p>Вход</p>
-							</li>
+							</li> -->
+
+							<input type="button" name="zareg" class="regb" value="Регистрация">
+							<input type="button" name="vhod" class="vhodb" value="Вход">
 						</div>
 					
 				</ul>
@@ -77,8 +192,8 @@
 	</header>
 
 
-	<div class="slider wow animate__animated animate__fadeInLeft animate__delay-5s animation__duration-4s">
-		<div class="line1">
+	<div class="slider wow animate__animated animate__fadeInLeft animate__delay-5s animation__duration-4s" id="slider">
+		<div class="lines line1">
 
 		</div>
 
@@ -121,7 +236,7 @@
 						
 		</div>
 
-		<div class="line2">
+		<div class="lines line2">
 			
 		</div>
 	</div>
@@ -129,7 +244,7 @@
 
 	<section id="one" class="one animate__animated animate__fadeIn animate__delay-5s">
 		<div class="container">
-			<div class="desc">
+			<div class="desc" id="regg">
 				<h1>
 					Добро пожаловать!
 				</h1>
@@ -227,28 +342,259 @@
 	</footer>
 
 
-<!-- <script>
-wow = new WOW( {
-    boxClass:     'wow',
-    animateClass: 'animated',
-    offset:       100
-    }
-);
 
-wow.init();
-</script> -->
 <script>
- 	 // window.onload = function () {
-   //  document.body.classList.add('loaded_hiding');
+	// -----ПРЕЛОАДЕР-----
+
     window.setTimeout(function () {
-      document.body.classList.add('loaded', 'loaded_hiding');
-      // document.body.classList.remove('loaded_hiding');
+    	document.body.classList.add('loaded', 'loaded_hiding');
+
     }, 4000);
     window.setTimeout(function(){
-    	 document.body.classList.add('loadeds');
+    	document.body.classList.add('loadeds');
     	document.body.classList.remove('loaded_hiding');
     }, 5500);
-  // }
+
+// -----ПРЕЛОАДЕР-----
+
+
+
+
+
+    var knop = document.querySelector('.knop')
+	var chh = document.querySelector('.ch')
+
+	var form_r = document.querySelector('.regf')
+	var form_v = document.querySelector('.vhodf')
+	var open_r = document.querySelector('.regb')
+	var close_r = document.querySelector('.close_r')
+
+	var open_v = document.querySelector('.vhodb')
+	var close_v = document.querySelector('.close_v')
+
+	var con = document.getElementsByClassName('container')
+	var conn = document.querySelector('.container1')
+	var slider = document.querySelector('.sliderimg')
+	var lines = document.getElementsByClassName('lines')
+
+
+
+
+
+
+
+
+	function Open_r(){
+		console.log(con);
+		for(var i = 0; i < con.length; i++){
+			// con[i].style.opacity = '0.3';
+			con[i].style.filter = 'blur(7px)';
+		}
+
+		for(var j = 0; j < lines.length; j++){
+			// lines[j].style.opacity = '0.3';
+			lines[j].style.filter = 'blur(7px)';
+		}
+
+		// conn.style.opacity = '0.3';
+		conn.style.filter = 'blur(7px)';
+
+		// slider.style.opacity = '0.3';
+		slider.style.filter = 'blur(7px)';
+
+		form_r.style.display = 'block';
+		}
+
+
+
+
+
+	function Close_r(){
+		for(var i = 0; i < con.length; i++){
+			con[i].style.opacity = '1';
+			con[i].style.filter = '';
+		}
+
+		for(var j = 0; j < lines.length; j++){
+			lines[j].style.opacity = '1';
+			lines[j].style.filter = '';
+		}
+
+
+		conn.style.opacity = '1';
+		conn.style.filter = '';
+
+		slider.style.opacity = '1';
+		slider.style.filter = '';
+
+		form_r.style.display = 'none';
+	}
+
+
+
+
+
+	function Open_v(){
+		console.log(con);
+		for(var i = 0; i < con.length; i++){
+			// con[i].style.opacity = '0.3';
+			con[i].style.filter = 'blur(7px)';
+		}
+
+		for(var j = 0; j < lines.length; j++){
+			// lines[j].style.opacity = '0.3';
+			lines[j].style.filter = 'blur(7px)';
+		}
+
+		// conn.style.opacity = '0.3';
+		conn.style.filter = 'blur(7px)';
+
+		// slider.style.opacity = '0.3';
+		slider.style.filter = 'blur(7px)';
+
+		form_v.style.display = 'block';
+		}
+
+
+
+
+	function Close_v(){
+		for(var i = 0; i < con.length; i++){
+			con[i].style.opacity = '1';
+			con[i].style.filter = '';
+		}
+
+		for(var j = 0; j < lines.length; j++){
+			lines[j].style.opacity = '1';
+			lines[j].style.filter = '';
+		}
+
+
+		conn.style.opacity = '1';
+		conn.style.filter = '';
+
+		slider.style.opacity = '1';
+		slider.style.filter = '';
+
+		form_v.style.display = 'none';
+	}
+
+
+
+
+
+	open_r.addEventListener('click', Open_r);
+	close_r.addEventListener('click', Close_r)
+
+	open_v.addEventListener('click', Open_v);
+	close_v.addEventListener('click', Close_v)
+	
+
+
+
+// -----ВАЛИДАЦИЯ ФОРМЫ-----
+
+	chh.addEventListener('click', function(){
+		this.classList.toggle('active');
+		knop.classList.toggle('active');
+		knop.toggleAttribute("disabled");
+	})
+
+	
+	function checkform(f){
+		var f = document.querySelector('.regf')
+		var name = f.usernamer.value;
+		var email = f.email.value;
+		var number = f.number.value;
+		var userpassr = f.userpassr.value;
+		var userpass2 = f.userpass2.value;
+
+		var error = "";
+
+		if(name == "" || email == "" || number == "" || userpassr == "" ||userpass2 == "")
+			error = "Заполните все поля!";
+
+		else if(userpassr != userpass2)
+			error += "Пароли должны совпадать!";
+
+		else if( isNaN(number) )
+			error += "Номер телефона должен содержать цифры!";
+
+		if(error != ""){
+			document.getElementById('error').innerHTML = error;
+			// return false;
+		}
+		else {
+			alert("Все данные корректно заполнены!");
+			console.log("\nЛогин: ", name)
+			console.log("email: ", email)
+			console.log("Номер телефона: ", number)
+			console.log("Пароль: ", userpassr);
+			f.usernamer.value = '';
+			f.email.value = '';
+			f.number.value = '';
+			f.userpassr.value = '';
+			f.userpass2.value = '';
+			chh.classList.remove('active');
+			knop.classList.remove('active');
+			document.getElementById('error').innerHTML = error;
+			knop.toggleAttribute("disabled");
+			// return true;
+				
+		}
+
+}
+
+
+
+// 	function checkform(f){
+// 		var name = f.usernamer.value;
+// 		var email = f.email.value;
+// 		var number = f.number.value;
+// 		var userpassr = f.userpassr.value;
+// 		var userpass2 = f.userpass2.value;
+
+// 		var error = "";
+
+// 		if(name == "" || email == "" || number == "" || userpassr == "" ||userpass2 == "")
+// 			error = "Заполните все поля!";
+
+// 		else if(userpassr != userpass2)
+// 			error += "Пароли должны совпадать!";
+
+// 		else if( isNaN(number) )
+// 			error += "Номер телефона должен содержать цифры!";
+
+// 		if(error != ""){
+// 			document.getElementById('error').innerHTML = error;
+// 			return false;
+// 		}
+// 		else {
+// 			alert("Все данные корректно заполнены!");
+// 			// Console.log(name, email, number, userpassr, userpass2)
+// 			return true;
+				
+// 		}
+
+// }
+
+
+var zar = document.querySelector('.knopkareg')
+zar.addEventListener('click', checkform)
+
+
+var navham = document.querySelector('.navham')
+var hamm = document.querySelector('.ham')
+
+hamm.addEventListener('click', function(){
+	navham.classList.toggle('active')
+})
+
+// -----ВАЛИДАЦИЯ ФОРМЫ-----
+
+
+
+
 </script>
 </body>
 </html>
