@@ -45,7 +45,7 @@
 			</div>
 
 			<div class="email">
-				<input type="text" name="email" placeholder="E-mail">
+				<input type="text" name="email" placeholder="E-mail" pattern=".+@tutsplus\.com|.+@envato\.com |.+@mail\.ru" >
 			</div>
 
 			<div class="tel">
@@ -511,15 +511,22 @@
 
 		var error = "";
 
+		// var regExp = '.+@tutsplus\.com|.+@envato\.com |.+@mail\.ru';
+
+		// regExp.test(email)
+
 		if(name == "" || email == "" || number == "" || userpassr == "" ||userpass2 == "")
 			error = "Заполните все поля!";
-		
+
 		else if(userpassr.length < 6)
 			error += "Слишком короткий пароль!";
 
 		else if(userpassr != userpass2)
 			error += "Пароли должны совпадать!";
-		
+
+		else if(email.split("@").length <= 1)
+			error += "Неверно указан email";
+
 		else if( isNaN(number) )
 			error += "Номер телефона должен содержать цифры!";
 
@@ -564,9 +571,6 @@
 
 // 		else if(userpassr != userpass2)
 // 			error += "Пароли должны совпадать!";
-	
-		else if(email.split("@").length <= 1)
-			error += "Неверно указан email";
 
 // 		else if( isNaN(number) )
 // 			error += "Номер телефона должен содержать цифры!";
