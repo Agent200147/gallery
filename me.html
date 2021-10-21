@@ -11,7 +11,14 @@
 <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-<script src="js/main.js"></script>
+
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+/>
+
+<link rel="shortcut icon" href="img/a.svg" type="image/png">
+
 </head>
 
 <body>
@@ -31,14 +38,16 @@
 -----РЕГИСТРАЦИЯ----
 -----РЕГИСТРАЦИЯ---- -->
 
-<form action="#" method="post" class="regf">
-<!-- 	onsubmit="return checkform(this)" -->
-
-			<div class="reg" id="regg">
+<div class="forma">
+				<div class="reg" id="regg">
 				<p>Регистрация</p>
 				<img src="img/reg.png" alt="">
 				<div class="close close_r"><img src="img/close.png" alt=""></div>
 			</div>
+<form action="#" method="post" class="regf">
+<!-- 	onsubmit="return checkform(this)" -->
+
+
 
 			<div class="log">
 				<input type="text" name="usernamer" placeholder="Логин" class="login">
@@ -69,9 +78,12 @@
 			<div id="error"></div>
 
 			<div class="knopkareg">
-				<input type="button" disabled="" name="zareg" class="knop" value="Зарегистрироваться">
+				<input type="button" disabled="disabled" name="zareg" class="knop" value="Зарегистрироваться">
 			</div>
 		</form>
+
+
+</div>
 
 <!-- -----РЕГИСТРАЦИЯ-----
 -----РЕГИСТРАЦИЯ-----
@@ -87,27 +99,32 @@
 -----ВХОД-----
 -----ВХОД----- -->
 
-	<form action="#" method="post" class="vhodf">
+	<div class="forma_v">
 
 		<div class="vhod">
 			<p>Вход</p>
 			<img src="img/vhod.png" alt="">
-			<div class="close close_v"><img src="img/close.png" alt=""></div>
+		<div class="close close_v"><img src="img/close.png" alt=""></div>
 		</div>
+		
+		<form action="#" method="post" class="vhodf">
 
-		<div class="log">
-			<input type="text" name="usernamev" placeholder="Логин" class="login">
-		</div>
+			<div class="log">
+				<input type="text" name="usernamev" placeholder="Логин" class="login">
+			</div>
 
-		<div class="pass">
-			<input type="password" name="userpassv" placeholder="Пароль">
-		</div>
+			<div class="pass">
+				<input type="password" name="userpassv" placeholder="Пароль">
+			</div>
 
 
-		<div class="knopkavhod">
-			<input type="submit" name="zareg" class="knopv" value="Войти">
-		</div>
+			<div class="knopkavhod">
+				<input type="submit" name="zareg" class="knopv" value="Войти">
+			</div>
 	</form>
+
+	</div>
+
 
 <!-- -----ВХОД------
 -----ВХОД-----
@@ -122,12 +139,13 @@
 
 
 			<div class="shapka animate__animated animate__fadeIn animate__delay-4s">
-				<div class="ham"><img src="img/menu.svg" alt=""></div>
+				<div class="ham"><img src="img/menu.svg" alt=""> <img src="img/close.svg"></div>
 				
 				<img src="img/logo1.png" alt="">
 
 				<div class="navham">
-							
+							<div class="hammenu">
+
 						<li>
 							<a href="#header">
 								Главная
@@ -143,6 +161,9 @@
 								Контакты
 							</a>
 						</li>
+
+							</div>
+					
 
 					</div>
 
@@ -192,7 +213,7 @@
 	</header>
 
 
-	<div class="slider wow animate__animated animate__fadeInLeft animate__delay-5s animation__duration-4s" id="slider">
+	<div class="slider wow animate__animated animate__fadeInLeft animate__delay-5s animation__duration-5s" id="slider">
 		<div class="lines line1">
 
 		</div>
@@ -271,13 +292,117 @@
 				Загружайте свои фотографии!
 			</h1>
 
-			<div class="gallery">
+			<div class="sw swiper-container">
+				<div class="left">
+					<img src="img/left1.svg" alt="">
+				</div>
+
+				
+				<div class="sw_wrapper swiper-wrapper">
+					<div class="sw_slide swiper-slide sl">
+						<div class="sw_image firstrow">
+						<img src="img/gallery/1 1.png" alt="">
+						<img src="img/gallery/2 1.png" alt="">
+						<img src="img/gallery/3 1.png" alt="">
+					</div>
+
+					<div class="sw_image secondrow">
+						<img src="img/gallery/4 1.png" alt="">
+						<img src="img/gallery/5 1.png" alt="">
+						<img src="img/gallery/6 1.png" alt="">
+					</div>
+
+					<div class="sw_image thirdrow">
+						<img src="img/gallery/7 1.png" alt="">
+						<img src="img/gallery/8 1.png" alt="">
+						<img src="img/gallery/9 1.png" alt="">
+					</div>
+					</div>
+
+
+
+					<div class="sw_slide swiper-slide">
+						<div class="sw_image firstrow">
+						<img src="img/gallery/7 1.png" alt="">
+						<img src="img/gallery/8 1.png" alt="">
+						<img src="img/gallery/9 1.png" alt="">
+					</div>
+
+					<div class="sw_image secondrow">
+						<img src="img/gallery/4 1.png" alt="">
+						<img src="img/gallery/5 1.png" alt="">
+						<img src="img/gallery/6 1.png" alt="">
+					</div>
+
+					<div class="sw_image thirdrow">
+						<img src="img/gallery/1 1.png" alt="">
+						<img src="img/gallery/2 1.png" alt="">
+						<img src="img/gallery/3 1.png" alt="">
+					</div>
+					</div>
+
+
+					<div class="sw_slide swiper-slide">
+						<div class="sw_image firstrow">
+						<img src="img/gallery/4 1.png" alt="">
+						<img src="img/gallery/5 1.png" alt="">
+						<img src="img/gallery/6 1.png" alt="">
+					</div>
+
+					<div class="sw_image secondrow">
+						<img src="img/gallery/1 1.png" alt="">
+						<img src="img/gallery/2 1.png" alt="">
+						<img src="img/gallery/3 1.png" alt="">
+					</div>
+
+					<div class="sw_image thirdrow">
+						<img src="img/gallery/7 1.png" alt="">
+						<img src="img/gallery/8 1.png" alt="">
+						<img src="img/gallery/9 1.png" alt="">
+					</div>
+					</div>
+
+
+					<div class="sw_slide swiper-slide">
+						<div class="sw_image firstrow">
+						<img src="img/gallery/4 1.png" alt="">
+						<img src="img/gallery/5 1.png" alt="">
+						<img src="img/gallery/6 1.png" alt="">
+					</div>
+
+					<div class="sw_image secondrow">
+
+						<img src="img/gallery/7 1.png" alt="">
+						<img src="img/gallery/8 1.png" alt="">
+						<img src="img/gallery/9 1.png" alt="">
+					</div>
+
+					<div class="sw_image thirdrow">
+						<img src="img/gallery/1 1.png" alt="">
+						<img src="img/gallery/2 1.png" alt="">
+						<img src="img/gallery/3 1.png" alt="">
+					</div>
+					</div>
+
+
+				</div>
+				<div class="right ">
+					<img src="img/right1.svg" alt="">
+				</div>
+
+			</div>
+			<div class="stran">1</div>
+
+					
+
+<!-- 			<div class="gallery">
 				<div class="left">
 					<img src="img/left.svg" alt="">
 				</div>
 
 				<div class="galleryimg">
-
+					
+					.slidee
 					<div class="firstrow">
 						<img src="img/gallery/1 1.png" alt="">
 						<img src="img/gallery/2 1.png" alt="">
@@ -296,17 +421,14 @@
 						<img src="img/gallery/9 1.png" alt="">
 					</div>
 
-<!-- 					<div class="row4">
-						
-					</div> -->
+
 				</div>
 
 				<div class="right">
 					<img src="img/right.svg" alt="">
 				</div>
 			</div>
-
-
+ -->
 
 
 
@@ -341,270 +463,7 @@
 		</div>
 	</footer>
 
-
-
-<script>
-	// -----ПРЕЛОАДЕР-----
-
-    window.setTimeout(function () {
-    	document.body.classList.add('loaded', 'loaded_hiding');
-
-    }, 4000);
-    window.setTimeout(function(){
-    	document.body.classList.add('loadeds');
-    	document.body.classList.remove('loaded_hiding');
-    }, 5500);
-
-// -----ПРЕЛОАДЕР-----
-
-
-
-
-
-    var knop = document.querySelector('.knop')
-	var chh = document.querySelector('.ch')
-
-	var form_r = document.querySelector('.regf')
-	var form_v = document.querySelector('.vhodf')
-	var open_r = document.querySelector('.regb')
-	var close_r = document.querySelector('.close_r')
-
-	var open_v = document.querySelector('.vhodb')
-	var close_v = document.querySelector('.close_v')
-
-	var con = document.getElementsByClassName('container')
-	var conn = document.querySelector('.container1')
-	var slider = document.querySelector('.sliderimg')
-	var lines = document.getElementsByClassName('lines')
-
-
-
-
-
-
-
-
-	function Open_r(){
-		console.log(con);
-		for(var i = 0; i < con.length; i++){
-			// con[i].style.opacity = '0.3';
-			con[i].style.filter = 'blur(7px)';
-		}
-
-		for(var j = 0; j < lines.length; j++){
-			// lines[j].style.opacity = '0.3';
-			lines[j].style.filter = 'blur(7px)';
-		}
-
-		// conn.style.opacity = '0.3';
-		conn.style.filter = 'blur(7px)';
-
-		// slider.style.opacity = '0.3';
-		slider.style.filter = 'blur(7px)';
-
-		form_r.style.display = 'block';
-		}
-
-
-
-
-
-	function Close_r(){
-		for(var i = 0; i < con.length; i++){
-			con[i].style.opacity = '1';
-			con[i].style.filter = '';
-		}
-
-		for(var j = 0; j < lines.length; j++){
-			lines[j].style.opacity = '1';
-			lines[j].style.filter = '';
-		}
-
-
-		conn.style.opacity = '1';
-		conn.style.filter = '';
-
-		slider.style.opacity = '1';
-		slider.style.filter = '';
-
-		form_r.style.display = 'none';
-	}
-
-
-
-
-
-	function Open_v(){
-		console.log(con);
-		for(var i = 0; i < con.length; i++){
-			// con[i].style.opacity = '0.3';
-			con[i].style.filter = 'blur(7px)';
-		}
-
-		for(var j = 0; j < lines.length; j++){
-			// lines[j].style.opacity = '0.3';
-			lines[j].style.filter = 'blur(7px)';
-		}
-
-		// conn.style.opacity = '0.3';
-		conn.style.filter = 'blur(7px)';
-
-		// slider.style.opacity = '0.3';
-		slider.style.filter = 'blur(7px)';
-
-		form_v.style.display = 'block';
-		}
-
-
-
-
-	function Close_v(){
-		for(var i = 0; i < con.length; i++){
-			con[i].style.opacity = '1';
-			con[i].style.filter = '';
-		}
-
-		for(var j = 0; j < lines.length; j++){
-			lines[j].style.opacity = '1';
-			lines[j].style.filter = '';
-		}
-
-
-		conn.style.opacity = '1';
-		conn.style.filter = '';
-
-		slider.style.opacity = '1';
-		slider.style.filter = '';
-
-		form_v.style.display = 'none';
-	}
-
-
-
-
-
-	open_r.addEventListener('click', Open_r);
-	close_r.addEventListener('click', Close_r)
-
-	open_v.addEventListener('click', Open_v);
-	close_v.addEventListener('click', Close_v)
-	
-
-
-
-// -----ВАЛИДАЦИЯ ФОРМЫ-----
-
-	chh.addEventListener('click', function(){
-		this.classList.toggle('active');
-		knop.classList.toggle('active');
-		knop.toggleAttribute("disabled");
-	})
-
-	
-	function checkform(f){
-		var f = document.querySelector('.regf')
-		var name = f.usernamer.value;
-		var email = f.email.value;
-		var number = f.number.value;
-		var userpassr = f.userpassr.value;
-		var userpass2 = f.userpass2.value;
-
-		var error = "";
-
-		// var regExp = '.+@tutsplus\.com|.+@envato\.com |.+@mail\.ru';
-
-		// regExp.test(email)
-
-		if(name == "" || email == "" || number == "" || userpassr == "" ||userpass2 == "")
-			error = "Заполните все поля!";
-
-		else if(userpassr.length < 6)
-			error += "Слишком короткий пароль!";
-
-		else if(userpassr != userpass2)
-			error += "Пароли должны совпадать!";
-
-		else if(email.split("@").length <= 1)
-			error += "Неверно указан email";
-
-		else if( isNaN(number) )
-			error += "Номер телефона должен содержать цифры!";
-
-		if(error != ""){
-			document.getElementById('error').innerHTML = error;
-			// return false;
-		}
-		else {
-			alert("Все данные корректно заполнены!");
-			console.log("\nЛогин: ", name)
-			console.log("email: ", email)
-			console.log("Номер телефона: ", number)
-			console.log("Пароль: ", userpassr);
-			f.usernamer.value = '';
-			f.email.value = '';
-			f.number.value = '';
-			f.userpassr.value = '';
-			f.userpass2.value = '';
-			chh.classList.remove('active');
-			knop.classList.remove('active');
-			document.getElementById('error').innerHTML = error;
-			knop.toggleAttribute("disabled");
-			// return true;
-				
-		}
-
-}
-
-
-
-// 	function checkform(f){
-// 		var name = f.usernamer.value;
-// 		var email = f.email.value;
-// 		var number = f.number.value;
-// 		var userpassr = f.userpassr.value;
-// 		var userpass2 = f.userpass2.value;
-
-// 		var error = "";
-
-// 		if(name == "" || email == "" || number == "" || userpassr == "" ||userpass2 == "")
-// 			error = "Заполните все поля!";
-
-// 		else if(userpassr != userpass2)
-// 			error += "Пароли должны совпадать!";
-
-// 		else if( isNaN(number) )
-// 			error += "Номер телефона должен содержать цифры!";
-
-// 		if(error != ""){
-// 			document.getElementById('error').innerHTML = error;
-// 			return false;
-// 		}
-// 		else {
-// 			alert("Все данные корректно заполнены!");
-// 			// Console.log(name, email, number, userpassr, userpass2)
-// 			return true;
-				
-// 		}
-
-// }
-
-
-var zar = document.querySelector('.knopkareg')
-zar.addEventListener('click', checkform)
-
-
-var navham = document.querySelector('.navham')
-var hamm = document.querySelector('.ham')
-
-hamm.addEventListener('click', function(){
-	navham.classList.toggle('active')
-})
-
-// -----ВАЛИДАЦИЯ ФОРМЫ-----
-
-
-
-
-</script>
+<!-- <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> -->
+<script src="js/main.js"></script>
 </body>
 </html>
