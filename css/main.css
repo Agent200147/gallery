@@ -22,17 +22,22 @@ body{
 
 
 .navham{
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    position: absolute;
-    margin-left: -157px;
-    margin-bottom: -160px;
-    background: #07C3B8;
-    height: 110px;
     justify-content: space-between;
+    flex-direction: row;
+    height: 130px;
+    position: absolute;
+    margin-top: -257px;
+    opacity: 0;
+    transform: scale(0.1);
+
+
+/*    margin-bottom: -160px;*/
+    background: black;
+
     z-index: -2000;
 
-    display: none;
     
     -webkit-transition: all 0.5s ease;;
     -moz-transition: all 0.5s ease;;
@@ -40,31 +45,58 @@ body{
     transition: all 0.5s ease;
 }
 
+.hammenu{
+    margin-top: 83px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .shapka .active {
-        border-radius: 10px;
-    margin-left: 0px;
+    border-radius: 10px;
+    margin-top: 20px;
+    opacity: 1;
+    transform: scale(1);
+
     -webkit-transition: all 0.5s ease;;
     -moz-transition: all 0.5s ease;;
     -o-transition: all 0.5s ease;;
     transition: all 0.5s ease;
 }
 .navham li a{
-    color: black;
+    color: white;
     text-decoration: none;
     font-size: 30px;
     letter-spacing: 0.08em;
     list-style-type: none;
-
 }
+
 .navham li{
     list-style-type: none;
-    border: 2px solid black;
 }
 
 .ham{
     display: none;
 }
 
+.ham img:nth-child(1){
+    margin-top: 8px;
+}
+
+.ham img:nth-child(2){
+    display: none;
+}
+
+.active .ham img:nth-child(1){
+    display: none;
+}
+.active .ham img:nth-child(2){
+    display: block;
+    width: 30px;
+}
 /*-----СТИЛИ РЕГИСТРАЦИИ-----
 -----СТИЛИ РЕГИСТРАЦИИ-----
 -----СТИЛИ РЕГИСТРАЦИИ-----*/
@@ -82,14 +114,15 @@ body{
     transition: all 0.3s ease 0s;
 }
 
-.regf{
+.forma{
     position: fixed;
     top: 48.5%;
     left: 50%;
     margin-top: -300px;
     margin-left: -295px;
     width: 590px;
-    height: 600px;
+
+/*margin-bottom: 100px;*/
     background: #07C3B8;
     border-radius: 11px;
     z-index: 1;
@@ -101,16 +134,16 @@ body{
     transition: all 2s ease 0s;
 }
 
-   .regf:target {
+   .forma:target {
       opacity: 1;
       pointer-events: auto;
       overflow-y: auto;
     }
-form .reg img{
+.forma .reg img{
     border-radius: 11px;
 }
 
-form .reg p{
+.forma .reg p{
     margin-top: 0px;
     margin-bottom: 0px;
     position: absolute;
@@ -133,6 +166,7 @@ form .reg p{
     position: absolute;
     left: 561px;
     top: 11px;
+    width: 20px;
 }
 
 
@@ -150,6 +184,8 @@ text-align: center;
     line-height: 24px;
     padding-left: 17px;
     margin-bottom: 9px;
+
+
 }
 
 .log{
@@ -243,6 +279,7 @@ text-align: center;
     margin-top: 6px;
     text-align: center;
     padding-left: 0px;
+    margin-bottom: 37px;
 
     -webkit-transition: all 0.3s ease;;
     -moz-transition: all 0.3s ease;;
@@ -290,14 +327,14 @@ text-align: center;
 -----СТИЛИ ВХОДА-----
 -----СТИЛИ ВХОДА-----*/
 
-.vhodf{
+.forma_v{
     position: fixed;
     top: 50%;
     left: 50%;
     margin-top: -224px;
     margin-left: -295px;
     width: 590px;
-    height: 438px;
+/*    height: 438px;*/
     background: #07C3B8;
     border-radius: 11px;
 
@@ -381,6 +418,7 @@ text-align: center;
     margin-top: 19px;
     text-align: center;
     padding-left: 0px;
+    margin-bottom: 42px;
 
     -webkit-transition: all 0.3s ease;;
     -moz-transition: all 0.3s ease;;
@@ -636,6 +674,11 @@ li{
     margin-top: 51px;
     height: 12px;
     background: rgba(7, 195, 184, 0.8);
+
+    -webkit-transition: all 0.5s ease;;
+    -moz-transition: all 0.5s ease;;
+    -o-transition: all 0.5s ease;;
+    transition: all 0.5s ease;
 }
 
 .line2{
@@ -658,6 +701,10 @@ li{
     animation: slide 60s infinite;
     animation-delay: 6.5s;
 }
+
+/*.sliderimg .half1 img, .sliderimg .half2 img{
+    width: 90.285714%;
+}*/
 
 @keyframes slide {
   0% {margin-left: 0px;}
@@ -738,8 +785,10 @@ h1{
 -----СЕКЦИЯ1-----*/
 
 
-
-
+/*.left img{
+    width: 38px;
+}
+*/
 
 .two1{
     margin-top: 180px;
@@ -774,7 +823,13 @@ h1{
     margin-left: 20px;
     margin-top: auto;
     margin-bottom: auto;
-    cursor: pointer;
+    cursor: auto;
+    opacity: 0;
+
+    -webkit-transition: all 0.5s ease;;
+    -moz-transition: all 0.5s ease;;
+    -o-transition: all 0.5s ease;;
+    transition: all 0.5s ease;
 }
 
 
@@ -789,6 +844,62 @@ h1{
     padding-right: 30px;
 }
 
+.swiper-container{
+    width: 1170px;
+    height: 690px;
+    display: flex;
+    background: rgba(7, 195, 184, 0.8);
+    border-radius: 30px;
+    min-width: 0;
+}
+
+.swiper-container .swiper-wrapper{
+/*    margin: 0 auto;*/
+     height: auto;
+    width: 1030px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    overflow: hidden;
+}
+
+
+.swiper-container .swiper-slide{
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 966px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    -webkit-transition: all 1s ease;;
+    -moz-transition: all 1s ease;;
+    -o-transition: all 1s ease;;
+    transition: all 1s ease;
+}
+
+.swiper-container .swiper-slide img{
+
+    cursor: pointer;
+
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
+}
+
+.swiper-container .swiper-slide img:hover{
+
+
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    cursor: pointer;
+
+}
+
 /*.galleryimg img{
     object-fit: cover;
     width: 236px;
@@ -798,14 +909,17 @@ h1{
 }
 */
 
+.swiper-container .swiper-slide:first-child{
+/*    margin-left: -1030px;*/
+}
 .firstrow, .secondrow, .thirdrow{
     display: flex;
     justify-content: space-between;
 
 }
-.secondrow, .thirdrow{
+/*.secondrow, .thirdrow{
     margin-top: 45px;
-}
+}*/
 
 .right{
     margin-left: auto;
@@ -813,6 +927,11 @@ h1{
     margin-top: auto;
     margin-bottom: auto;
     cursor: pointer;
+
+    -webkit-transition: all 0.5s ease;;
+    -moz-transition: all 0.5s ease;;
+    -o-transition: all 0.5s ease;;
+    transition: all 0.5s ease;
 }
 
 .galleryimg img{
@@ -857,20 +976,20 @@ footer{
     text-align: center;
     display: flex;
     align-items: center;
-    background: rgba(7, 195, 184, 0.8);
-    border-radius: 42px;
+/*    background: rgba(7, 195, 184, 0.8);
+    border-radius: 42px;*/
 
 }
 
 .conhed h1{
     font-size: 48px;
-    color: black;
+    color: white;
     margin-left: auto;
     margin-right: auto;
 }
 
 .icons{
-    margin-top: 220px;
+    margin-top: 130px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -879,20 +998,21 @@ footer{
 }
 
 .icons img{
-    -webkit-transition: all 0.5s ease;;
-    -moz-transition: all 0.5s ease;;
-    -o-transition: all 0.5s ease;;
-    transition: all 0.5s ease;
+    width: 190px;
+    -webkit-transition: all 0.4s ease;;
+    -moz-transition: all 0.4s ease;;
+    -o-transition: all 0.4s ease;;
+    transition: all 0.4s ease;
 }
 
 .icons img:hover{
-    -webkit-transform: scale(1.3);
-    -ms-transform: scale(1.3);
-    transform: scale(1.3);
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .prav{
-    margin-top: 346px;
+    margin-top: 180px;
     display: flex;
     justify-content: center;
 
@@ -909,7 +1029,12 @@ footer{
 
 
 
-
+.stran{
+    margin-top: 10px;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
 
 
 
@@ -935,18 +1060,22 @@ footer{
 }
 
 
-  @media screen and (max-width: 1200px) { 
+/*  @media screen and (max-width: 1200px) { 
     .container { width: 1140px;}
     .container1 { width: 100%;}
     .nav{width: 57%; margin-left: auto; margin-right: auto;}
-}
+}*/
 
 
 
-@media screen and (max-width: 1199px) { 
+@media screen and (max-width: 1200px) { 
     .container { width: 960px;}
     .container1 { width: 100%;}
+    .nav{width: 57%; margin-left: auto; margin-right: auto;}
     .gallery{width: 960px;}
+    .swiper-container{width: 960px; height: auto;}
+    .swiper-container .swiper-slide{width: 756px; }
+    .swiper-container .swiper-wrapper{ padding-top: 30px; padding-bottom: 30px; height: 500px;}
 
 }
 
@@ -959,28 +1088,40 @@ footer{
     .regb, .vhodb {font-size: 20px;}
     .regb{width: 160px; margin-right: 5px;}
     .vhodb{width: 65px;}
-    .one{margin-top: 60px;}
+    .line1{margin-top: 20px;}
+
+    .one{margin-top: 40px;}
     h1{font-size: 50px;}
     .content{width: 450px; font-size: 22px;}
     .cam{margin-top: 70px;}
 
 
+    .two{margin-top: 220px;}
     .two h1{font-size: 32px;}
     .left{margin-left: 10px;}
+    .left img{width: 30px;}
     .right{margin-right: 10px;}
+    .right img{width: 30px;}
     .gallery{width: 720px; height: auto;}
     .galleryimg{padding-left: 10px; padding-right: 10px; 
     margin-left: 10px; margin-right: 10px;
     margin-top: 30px; margin-bottom: 30px;}
     .galleryimg img{width: 156px; height: 120px;}
 
+    .swiper-container{width: 720px;}
+    .swiper-container .swiper-slide{width: 603px; padding-right: 15px; padding-left: 15px;}
+    .swiper-container .swiper-wrapper{ padding-top: 20px; padding-bottom: 20px; height: 400px; margin-left: 5px; margin-right: 5px;}
+    .swiper-wrapper img{width: 170px; height: 96px;}
+    .stran{font-size: 26px;}
 
+    footer{margin-top: 210px;}
     .conhed{width: 500px;}
     .conhed h1{font-size: 44px;}
-    .icons img{width: 200px;}
+    .icons{margin-top: 65px;}
+    .icons img{width: 150px;}
 
 
-    .prav{margin-top: 280px;}
+    .prav{margin-top: 90px;}
     .prav h1{font-size: 22px;}
 }
 
@@ -988,21 +1129,24 @@ footer{
 @media screen and (max-width: 767px) { 
     .container { width: 540px;}
     .container1 { width: 100%;}
-    .line1{margin-top: 100px;}
+    .active .line1{ margin-top: 30px;}
+    .line1{margin-top: 0px;}
     .nav{display: none;}
-    .navham{ display: block }
+/*    .navham{ display: block }*/
     .ham {display: block; width: 40px; margin-right: 20px; padding-left: 20px; cursor: pointer;}
     .ham img{width: 40px;}
+    .shapka{margin-top: -15px;}
     .shapka img:nth-child(2){display: none;}
 
 
     .one{margin-top:;}
-    h1{font-size: 46px; width: 100%;}
+    .one h1{font-size: 46px; width: 100%;}
     .content{width: 100%; font-size: 20px;}
     .cam{margin-top: 100px;}
     .cam img{width: 200px;}
 
 
+    .two{margin-top: 180px;}
     .two h1{font-size: 28px;}
     .left{margin-left: 5px;}
     .left img{width: 25px;}
@@ -1013,14 +1157,22 @@ footer{
     margin-left: 7px; margin-right: 7px;
     margin-top: 20px; margin-bottom: 20px;}
     .galleryimg img{width: 126px; height: 100px;}
+    .stran{font-size: 22px;}
 
+    .swiper-container{width: 540px;}
+    .swiper-container .swiper-slide{width: 452px; padding-right: 10px; padding-left: 10px;}
+    .swiper-container .swiper-wrapper{ padding-top: 10px; padding-bottom: 10px; height: 350px; margin-left: 5px; margin-right: 5px;}
+    .swiper-wrapper img{width: 140px; height: 80px;}
+
+
+    footer{margin-top: 190px;}
     .conhed{width: 60%; height: auto;}
-    .conhed h1{font-size: 38px;}
-    .icons{margin-left: auto; margin-right: auto; width: 100%; text-align: center;}
-    .icons img{width: 70%;}
+    .conhed h1{font-size: 32px;}
+    .icons{margin-top: 50px; margin-left: auto; margin-right: auto; width: 100%; text-align: center;}
+    .icons img{width: 60%;}
 
 
-    .prav{margin-top: 200px; width: 45%; align-items: center; margin-left: auto; margin-right: auto;}
+    .prav{margin-top: 70px; width: 45%; align-items: center; margin-left: auto; margin-right: auto;}
     .prav h1{font-size: 20px;}
     .prav img{width: 18px;}
 }
@@ -1033,8 +1185,8 @@ footer{
 
 
 
-/*@media screen and (max-width: 630px) { 
-    .regf{margin-top: -400px; 
+@media screen and (max-width: 630px) { 
+    .forma{margin-top: -250px; 
         margin-left: auto; 
         margin-right: auto; 
         left: 0;
@@ -1056,18 +1208,89 @@ footer{
         width: 100vw;
     }
 
-    form .reg p{
-        left: 21vw;
-        top: 1em;
+    .close img{
+        width: 18px;
+        left: calc(100vw - 30px);
     }
 
-    .knopkareg{
+    .forma .reg p{
+        left: calc(50vw - 102px);
+        top: calc(13vw - 15px);
+        font-size: 30px
+    }
+
+    .ch{
+        margin-left: 4.5vw;
+        width: 95%;
+    }
+
+    .ch p{
+        font-size: calc(2vw + 6px);
+    }
+
+   .regf .knop{
         margin-left: auto;
         margin-right: auto;
-        width: 50%;
+        width: 93.1vw;
+        font-size: calc(2vw + 13px);
+        margin-bottom: 20px;
     }
+
+    .regf input{
+    font-size: calc(1vw + 13px);
+    line-height: 20px;
+    height: 30px;
+    margin-bottom: 7px;
 }
-*/
+
+
+
+
+
+
+
+    .forma_v{margin-top: -200px; 
+        margin-left: auto; 
+        margin-right: auto; 
+        left: 0;
+        width: 100vw;}
+    .vhodf input{
+    width: 80vw;
+    height: 35px;
+    border-radius: 11px;
+    border: 0px solid #bdbdbd;
+    font-family: inherit;
+    font-size: 22px;
+    line-height: 24px;
+    padding-left: 17px;
+    margin-bottom: 9px;
+    margin-left: auto;
+    margin-right: auto;
+}
+    .vhod img{
+        width: 100vw;
+    }
+
+    .close img{
+        width: 18px;
+        left: calc(100vw - 30px);
+    }
+
+    .forma_v .vhod p{
+        left: calc(50vw - 37px);
+        top: calc(13vw - 15px);
+        font-size: 30px
+    }
+
+   .vhodf .knopv{
+        margin-left: auto;
+        margin-right: auto;
+        width: 93.1vw;
+        font-size: calc(2vw + 13px);
+    }
+
+}
+
 
 
 
@@ -1078,6 +1301,16 @@ footer{
 @media screen and (max-width: 565px) { 
     .container { width: 100%; flex-direction: column-reverse;}
     .container1 { width: 100%;}
+    .shapka img:nth-child(1){width: 30px;}
+
+    .vhodb, .regb{height: 32px;}
+    .hammenu{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .navham li a{
+        font-size: 24px;
+    }
 /*    .galleryimg img{
     border: 4px solid #000000;
 }*/
@@ -1085,19 +1318,35 @@ footer{
 /*    .line1{margin-top: 40px;}*/
 
     .one{margin-top: 40px;}
-    .desc{width: 100%; text-align: center;}
-    h1{font-size: 40px; width: 90%; margin-left:auto; margin-right: auto; margin-top: 40px;}
-    .content{width: 90%; font-size: 18px; margin-left: auto; margin-right: auto;}
-    .cam{ margin-top: 0px; margin-left: auto; margin-right: auto; width: 100%; text-align: center;}
-    .cam img{width: 50%; }
+    .desc{width: 100%; }
+    .desc h1{
+        font-size: calc(36px + (40 - 36) * ((100vw - 320px) / (565 - 320))); 
+        width: 90%; 
+        margin-left:auto; margin-right: auto; 
+        margin-top: 20px; 
+        text-align: center;
+    }
+
+    .content{
+        width: 90%; 
+        padding-left: 6%; 
+        font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (565 - 320))); 
+        margin-left: auto; 
+        margin-right: auto;
+    }
+    .cam{ margin-top: -10px; margin-left: auto; margin-right: auto; width: 100%; text-align: center;}
+    .cam img{width: 44%; }
 
 
-    .two {margin-top: 190px;}
-    .two h1{font-size: 24px;}
+    .two{margin-top: 0px;}
+    .two1{margin-top: 30vw;}
+    .two h1{font-size: calc(24px + (32 - 24) * ((100vw - 320px) / (565 - 320)));
+            margin-bottom: 4vw;
+    }
     .left{margin-left: 5px;}
-    .left img{width: 25px;}
+    .left img{width: 4vw;}
     .right{margin-right: 5px;}
-    .right img{width: 25px;}
+    .right img{width: 4vw;}
     .gallery{width: 95%; height: auto; margin-left: auto; margin-right: auto;}
     .galleryimg{
         padding-left: 7px; 
@@ -1113,32 +1362,46 @@ footer{
         justify-content: space-between;
         width: 100%;
     }
+    .swiper-container{width: 100%; height: auto;}
+    .swiper-container .swiper-slide{width: 95.7%; height: auto;}
+    .swiper-container .swiper-wrapper{height: 55vw;}
+    .swiper-wrapper img{width: 31%; height: auto;}
     .galleryimg > div{
         flex-direction: column;
         margin-top: 0px;
     }
-    .thirdrow{
+/*    .thirdrow{
         display: none;
-    }
+    }*/
 
     .galleryimg img{width: 31vw; height: 10vh;}
 
 
+    footer{margin-top: 27vw;}
     .conhed{width: 60%; height: auto; border-radius: 42px;}
-    .conhed h1{font-size: 34px; margin-top: auto; height: auto;}
-    .icons{margin-top: 130px;}
+    .conhed h1{font-size: calc(24px + (32 - 24) * ((100vw - 320px) / (565 - 320))); 
+        margin-top: auto; height: auto;}
+    .icons{margin-top: 40px;}
+    .icons img{width: 50%;}
 
-    .prav{margin-top: 140px; width: 55%; display: flex; text-align: center;}
-    .prav h1{margin-top: 0px; font-size: 18px;}
+    .prav{margin-top: 50px; width: 55%; display: flex; text-align: center;}
+    .prav h1{margin-top: 0px; font-size: 14px;}
+    .prav img{width: 14px;}
 }
 
 
 @media screen and (max-width: 480px){
     .shapka img:nth-child(2){display: none;}
+    .forma{margin-top: -340px; 
+        margin-left: auto; 
+        margin-right: auto; 
+        left: 0;
+        width: 100vw;}
+
 }
 
 @media screen and (max-width: 380px){
-    .ham{ margin-left: 0px; padding-left: 0px; padding-right: 0px; width: 20px;}
+    .ham{ margin-left: 7px; padding-left: 0px; padding-right: 0px; width: 20px;}
     .regb{margin-right: 3px;}
 }
 /*-----АДАПТАЦИЯ-----
