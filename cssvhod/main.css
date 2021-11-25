@@ -1,0 +1,109 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Podkova', serif;
+}
+.container{
+	width: 1170px;
+	margin: 0 auto;
+}
+
+.vhodf{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -300px;
+	margin-left: -295px;
+	width: 590px;
+	height: 438px;
+	background: #07C3B8;
+	border-radius: 11px;
+}
+
+.vhod img{
+	border-radius: 11px;
+}
+
+.vhod p{
+	margin-top: 0px;
+	margin-bottom: 0px;
+
+	color: white;
+	font-weight: 500;
+	font-size: 40px;
+	line-height: 44px;
+	letter-spacing: 0.08em;
+
+	position: absolute;
+	left: 245px;
+	top: 63px;
+}
+
+form > div{
+text-align: center;
+}
+
+.vhodf input{
+	width: 373px;
+	height: 35px;
+	border-radius: 11px;
+	border: 0px solid #bdbdbd;
+	font-family: inherit;
+  	font-size: 22px;
+	line-height: 24px;
+	padding-left: 17px;
+	margin-bottom: 22px;
+}
+
+.log{
+	margin-top: 28px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.log input, .pass input{  
+    background-repeat: no-repeat; 
+    background-position: 97%; 
+    padding-right: 40px;
+	transition: border-color 0.17s ease-in-out, box-shadow 0.17s ease-in-out;
+
+}
+
+.log input:focus, .email input:focus, .tel input:focus, .pass input:focus {
+	color: #212529;
+	background-color: #fff;
+	border-color: #bdbdbd;
+	outline: 0;
+	box-shadow: 0 0 0 0.22rem rgba(138, 138, 138, 0.6);
+}
+
+.log input{background-image: url(../img/reg/user.svg);} 
+
+.pass input{background-image: url(../img/reg/parol.svg);}
+
+
+.vhodf .knopv{
+	cursor: pointer;
+	width: 430px;
+	height: 50px;
+	background: black;
+	color: white;
+	font-size: 24px;
+	line-height: 27px;
+	letter-spacing: 0.08em;
+	font-family: inherit;
+	margin-top: 19px;
+	text-align: center;
+	padding-left: 0px;
+
+	-webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
+}
+
+.knopv:hover{
+	background: white;
+	color: black;
+}
