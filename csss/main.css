@@ -1,0 +1,214 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Podkova', serif;
+}
+.container{
+	width: 1170px;
+	margin: 0 auto;
+}
+
+.main{
+	font-size: 50px;
+	cursor: pointer;
+
+}
+
+#error{
+	font-size: 18px;
+	text-align: center;
+	color: red;
+	font-family: inherit; 
+	margin-top: 20px;
+	letter-spacing: 0.08em;
+	-webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.regf{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -300px;
+	margin-left: -295px;
+	width: 590px;
+	height: 600px;
+	background: #07C3B8;
+	border-radius: 11px;
+/*	z-index: 1050;
+      opacity: 0;
+       pointer-events: none;*/
+}
+
+   .regf:target {
+      opacity: 1;
+      pointer-events: auto;
+      overflow-y: auto;
+    }
+.reg img{
+	border-radius: 11px;
+}
+
+.reg p{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	position: absolute;
+	color: white;
+	font-weight: 500;
+	font-size: 40px;
+	line-height: 44px;
+	letter-spacing: 0.08em;
+	left: 159px;
+	top: 63px;
+}
+
+.close{
+	cursor: pointer;
+}
+
+.close img{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	position: absolute;
+	left: 561px;
+	top: 11px;
+}
+
+
+form > div{
+text-align: center;
+}
+
+.regf input{
+	width: 373px;
+	height: 35px;
+	border-radius: 11px;
+	border: 0px solid #bdbdbd;
+	font-family: inherit;
+  	font-size: 22px;
+	line-height: 24px;
+	padding-left: 17px;
+	margin-bottom: 9px;
+}
+
+.log{
+	margin-top: 23px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.log input, .email input, .tel input, .pass input{  
+    background-repeat: no-repeat; 
+    background-position: 97%; 
+    padding-right: 40px;
+	transition: border-color 0.17s ease-in-out, box-shadow 0.17s ease-in-out;
+
+}
+
+.log input:focus, .email input:focus, .tel input:focus, .pass input:focus {
+	color: #212529;
+	background-color: #fff;
+	border-color: #bdbdbd;
+	outline: 0;
+	box-shadow: 0 0 0 0.22rem rgba(138, 138, 138, 0.6);
+}
+
+.log input{background-image: url(../img/reg/user.svg);} 
+.email input{background-image: url(../img/reg/mail.svg);}
+.tel input{background-image: url(../img/reg/phone.svg);}
+.pass input{background-image: url(../img/reg/parol.svg);}
+
+.ch{
+	margin-top: 15px;
+	text-align: left;
+	display: flex;
+	align-items: center;
+	margin-left: 82px;
+	width: 67%;
+	cursor: pointer;
+}
+
+.ch input{
+	display: none;
+}
+
+.ch p{
+	margin-left: 4px;
+	font-size: 16px;
+	line-height: 18px;
+	letter-spacing: 0.04em;
+	margin-bottom: auto;
+	margin-top: auto;
+}
+
+.ch img:nth-child(1){
+	margin-right: -17px;
+	opacity: 0;
+
+	-webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+.active img:nth-child(1) {
+	opacity: 1;
+
+	-webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.knopkareg{
+	margin-top: 16px;
+		-webkit-transition: all 3s ease 0s;
+    -moz-transition: all 3s ease 0s;
+    -o-transition: all 3s ease 0s;
+    transition: all 3s ease 0s;
+}
+
+.regf .knop{
+	width: 430px;
+	height: 50px;
+	background: #8DA399;
+	color: white;
+	font-size: 24px;
+	line-height: 27px;
+	letter-spacing: 0.08em;
+	font-family: inherit;
+	margin-top: 6px;
+	text-align: center;
+	padding-left: 0px;
+
+	-webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
+}
+
+.knopkareg .active{
+	cursor: pointer;
+	width: 430px;
+	height: 50px;
+	background: black;
+	color: white;
+	font-size: 24px;
+	line-height: 27px;
+	letter-spacing: 0.08em;
+	font-family: inherit;
+	margin-top: 6px;
+	text-align: center;
+	padding-left: 0px;
+
+	-webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
+}
+.knopkareg .active:hover{
+	background: white;
+	color: black;
+}
